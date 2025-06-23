@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <main class="main-content">
+        <form class="employee-form">
+          <div class="form-content">
+            <div class="form-fields">
+              <div>
+                <div class="search-section">
+                  <div class="field-group">
+                    <label for="employee-search">Employee No to Search</label>
+                    <div>
+                      <input
+                        type="text"
+                        id="employee-search"
+                        placeholder="Enter employee number"
+                      />
+                      <button type="button" class="search-btn">
+                        Search By Employee
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-navigation">
+                  <div class="nav-controls">
+                    <div class="field-group">
+                      <div class="employee-no-section">
+                        <label>Employee No</label>
+                        <input type="text" readonly class="employee-no-input" />
+                      </div>
+                      <div class="nav-buttons">
+                        <button type="button" class="nav-btn">&lt;</button>
+                        <button type="button" class="nav-btn">&gt;</button>
+                        <button type="button" class="nav-btn">&lt;&lt;</button>
+                        <button type="button" class="nav-btn">&gt;&gt;</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="field-group">
+                <label>User Id</label>
+                <input type="text" id="useId" />
+              </div>
+              <div class="field-group">
+                <label for="firstName"
+                  >First Name <span class="required">*</span></label
+                >
+                <input type="text" id="firstName" required />
+              </div>
+
+              <div class="field-group">
+                <label for="lastName"
+                  >Last Name <span class="required">*</span></label
+                >
+                <input type="text" id="lastName" required />
+              </div>
+
+              <div class="field-group">
+                <label for="phoneNumber"
+                  >Phone Number <span class="required">*</span></label
+                >
+                <input type="tel" id="phoneNumber" required />
+              </div>
+
+              <div class="field-group">
+                <label for="altPhoneNumber">Alternative Phone Number</label>
+                <input type="tel" id="altPhoneNumber" />
+              </div>
+
+              <div class="field-group">
+                <label for="personalMobile">Personal Mobile Number</label>
+                <input type="tel" id="personalMobile" />
+              </div>
+
+              <div class="field-group">
+                <label for="officialMobile">Official Mobile Number</label>
+                <input type="tel" id="officialMobile" />
+              </div>
+
+              <div class="field-group">
+                <label for="personalEmail"
+                  >Personal Email <span class="required">*</span></label
+                >
+                <input type="email" id="personalEmail" required />
+              </div>
+
+              <div class="field-group">
+                <label for="officialEmail">Official Email</label>
+                <input type="email" id="officialEmail" />
+              </div>
+
+              <div class="field-group">
+                <label for="division"
+                  >Division <span class="required">*</span></label
+                >
+                <select id="division" required>
+                  <option value="">Default</option>
+                  <option value="it">IT</option>
+                  <option value="hr">HR</option>
+                  <option value="finance">Finance</option>
+                  <option value="marketing">Marketing</option>
+                </select>
+              </div>
+
+              <div class="field-group">
+                <label for="department"
+                  >Department <span class="required">*</span></label
+                >
+                <select id="department" required>
+                  <option value="">Default</option>
+                  <option value="development">Development</option>
+                  <option value="design">Design</option>
+                  <option value="testing">Testing</option>
+                  <option value="support">Support</option>
+                </select>
+              </div>
+
+              <div class="field-group">
+                <label for="location"
+                  >Location <span class="required">*</span></label
+                >
+                <select id="location" required>
+                  <option value="">Select Location</option>
+                  <option value="karachi">Karachi</option>
+                  <option value="lahore">Lahore</option>
+                  <option value="islamabad">Islamabad</option>
+                  <option value="peshawar">Peshawar</option>
+                </select>
+              </div>
+
+              <div class="field-group">
+                <label for="shift">Shift</label>
+                <select id="shift">
+                  <option value="">Select Shift</option>
+                  <option value="morning">Morning</option>
+                  <option value="evening">Evening</option>
+                  <option value="night">Night</option>
+                </select>
+              </div>
+
+              <div class="field-group">
+                <label for="employeeGroup"
+                  >Employee Group <span class="required">*</span></label
+                >
+                <select id="employeeGroup" required>
+                  <option value="">Select Group</option>
+                  <option value="permanent">Permanent</option>
+                  <option value="contract">Contract</option>
+                  <option value="intern">Intern</option>
+                </select>
+              </div>
+
+              <div class="field-group">
+                <label for="employmentStatus"
+                  >Employment Status <span class="required">*</span></label
+                >
+                <select id="employmentStatus" required>
+                  <option value="">Select Status</option>
+                  <option value="active">Active</option>
+                  <option value="inactive">Inactive</option>
+                  <option value="terminated">Terminated</option>
+                </select>
+              </div>
+
+              <div class="field-group">
+                <label for="joiningDate"
+                  >Date of Joining <span class="required">*</span></label
+                >
+                <input
+                  type="date"
+                  id="joiningDate"
+                  value="2025-06-23"
+                  required
+                />
+              </div>
+
+              <div class="field-group">
+                <label for="currentSalary">Current Salary</label>
+                <input type="number" id="currentSalary" readonly />
+              </div>
+
+              <div class="field-group">
+                <label for="birthDate"
+                  >Date of Birth <span class="required">*</span></label
+                >
+                <input type="date" id="birthDate" value="2025-06-23" required />
+              </div>
+
+              <div class="field-group">
+                <label for="bloodGroup">Blood Group</label>
+                <select id="bloodGroup">
+                  <option value="">Select Blood Group</option>
+                  <option value="A+">A+</option>
+                  <option value="A-">A-</option>
+                  <option value="B+">B+</option>
+                  <option value="B-">B-</option>
+                  <option value="AB+">AB+</option>
+                  <option value="AB-">AB-</option>
+                  <option value="O+">O+</option>
+                  <option value="O-">O-</option>
+                </select>
+              </div>
+
+              <div class="field-group">
+                <label for="nationalId">National Identification No</label>
+                <input type="text" id="nationalId" />
+              </div>
+
+              <div class="field-group">
+                <label for="ntn">NTN</label>
+                <input type="text" id="ntn" />
+              </div>
+
+              <div class="field-group">
+                <label for="externalId">External Employee ID</label>
+                <input type="text" id="externalId" />
+              </div>
+
+              <div class="field-group">
+                <label for="gender">Gender</label>
+                <select id="gender">
+                  <option value="">Select Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="field-group">
+                <label for="designation">Designation</label>
+                <select id="designation">
+                  <option value="">Select Designation</option>
+                  <option value="manager">Manager</option>
+                  <option value="developer">Developer</option>
+                  <option value="analyst">Analyst</option>
+                  <option value="executive">Executive</option>
+                </select>
+              </div>
+
+              <div class="field-group">
+                <label for="grade">Grade</label>
+                <select id="grade">
+                  <option value="">Select Grade</option>
+                  <option value="1">Grade 1</option>
+                  <option value="2">Grade 2</option>
+                  <option value="3">Grade 3</option>
+                  <option value="4">Grade 4</option>
+                  <option value="5">Grade 5</option>
+                </select>
+              </div>
+
+              <div class="field-group">
+                <label for="status"
+                  >Status <span class="required">*</span></label
+                >
+                <select id="status" required>
+                  <option value="">Select Status</option>
+                  <option value="active">Active</option>
+                  <option value="inactive">Inactive</option>
+                </select>
+              </div>
+
+              <div class="field-group">
+                <label for="resignationDate">Date of Resignation</label>
+                <input type="date" id="resignationDate" value="2025-06-21" />
+              </div>
+
+              <div class="field-group">
+                <label for="emergencyContact">Emergency Contact Person</label>
+                <input type="text" id="emergencyContact" />
+              </div>
+
+              <div class="field-group">
+                <label for="emergencyNumber">Emergency Contact Number</label>
+                <input type="tel" id="emergencyNumber" />
+              </div>
+
+              <div class="field-group">
+                <label for="discount">Discount on Shopping</label>
+                <div class="discount-group">
+                  <input type="number" id="discount" min="0" max="100" />
+                  <select id="discountType">
+                    <option value="%">%</option>
+                    <option value="fixed">Fixed</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="field-group">
+                <label for="saleAllowed">Sale Allowed on Discount</label>
+                <div class="sale-group">
+                  <input type="number" id="saleAllowed" />
+                  <span>/Month</span>
+                </div>
+              </div>
+
+              <div class="field-group checkbox-group">
+                <label>
+                  <input type="checkbox" id="sendInvoice" />
+                  Send Sale Invoice via Email
+                </label>
+              </div>
+
+              <div class="field-group checkbox-group">
+                <label>
+                  <input type="checkbox" id="creditSale" />
+                  Credit Sale Allowed
+                </label>
+              </div>
+
+              <div class="field-group">
+                <label for="homeAddress">Home Address</label>
+                <textarea id="homeAddress" rows="3"></textarea>
+              </div>
+
+              <div class="field-group">
+                <label for="country"
+                  >Country <span class="required">*</span></label
+                >
+                <select id="country" required>
+                  <option value="">Select Country</option>
+                  <option value="pakistan">Pakistan</option>
+                  <option value="india">India</option>
+                  <option value="bangladesh">Bangladesh</option>
+                  <option value="usa">USA</option>
+                  <option value="uk">UK</option>
+                </select>
+              </div>
+
+              <div class="field-group">
+                <label for="city">City <span class="required">*</span></label>
+                <select id="city" required>
+                  <option value="">Select City</option>
+                  <option value="karachi">Karachi</option>
+                  <option value="lahore">Lahore</option>
+                  <option value="islamabad">Islamabad</option>
+                  <option value="rawalpindi">Rawalpindi</option>
+                </select>
+              </div>
+            </div>
+            <div class="photo-section">
+              <div class="photo-upload">
+                <div class="photo-placeholder" id="photoPlaceholder">
+                  <span>Click to upload photo</span>
+                </div>
+                <input
+                  type="file"
+                  id="photoInput"
+                  accept="image/*"
+                  style="display: none"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn btn-primary">Add New</button>
+            <button type="button" class="btn btn-secondary">Update</button>
+          </div>
+
+          <div class="tabs">
+            <button type="button" class="tab-btn active" data-tab="education">
+              Education
+            </button>
+            <button type="button" class="tab-btn" data-tab="family">
+              Family
+            </button>
+            <button type="button" class="tab-btn" data-tab="bank">Bank</button>
+            <button type="button" class="tab-btn" data-tab="experience">
+              Experience
+            </button>
+            <button type="button" class="tab-btn" data-tab="salary">
+              Salary Breakup
+            </button>
+            <button type="button" class="tab-btn" data-tab="job-history">
+              Job History
+            </button>
+            <button type="button" class="tab-btn" data-tab="performance">
+              Performance Status
+            </button>
+          </div>
+
+          <div class="tab-content">
+            <div class="tab-pane active" id="education">
+              <div class="field-group">
+                <label for="degreeTitle">Degree Title</label>
+                <input type="text" id="degreeTitle" />
+              </div>
+              <div class="field-group">
+                <label for="instituteName">Institute Name</label>
+                <input type="text" id="instituteName" />
+              </div>
+              <div class="field-group">
+                <label for="completionYear">Degree Completion Year</label>
+                <input
+                  type="number"
+                  id="completionYear"
+                  min="1900"
+                  max="2030"
+                />
+              </div>
+              <div class="field-group">
+                <label for="gradeGPA">Grade or CGPA</label>
+                <input type="text" id="gradeGPA" />
+              </div>
+            </div>
+
+            <div class="tab-pane" id="family">
+              <div class="field-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" />
+              </div>
+              <div class="field-group">
+                <label for="relationName">Relation Name</label>
+                <input type="text" id="relationName" />
+              </div>
+              <div class="field-group">
+                <label for="familyBirthDate">Date of Birth</label>
+                <input type="date" id="familyBirthDate" />
+              </div>
+              <div class="field-group checkbox-group">
+                <label>
+                  <input type="checkbox" id="isDependent" />
+                  Is Dependent
+                </label>
+              </div>
+            </div>
+
+            <div class="tab-pane" id="bank">
+              <div class="field-group">
+                <label for="bankName">Bank Name</label>
+                <input type="text" id="bankName" />
+              </div>
+              <div class="field-group">
+                <label for="accountNumber">Account Number</label>
+                <input type="text" id="accountNumber" />
+              </div>
+              <div class="field-group">
+                <label for="branchCode">Branch Code</label>
+                <input type="text" id="branchCode" />
+              </div>
+              <div class="field-group">
+                <label for="iban">IBAN</label>
+                <input type="text" id="iban" />
+              </div>
+            </div>
+
+            <div class="tab-pane" id="experience">
+              <div class="field-group">
+                <label for="companyName">Company Name</label>
+                <input type="text" id="companyName" />
+              </div>
+              <div class="field-group">
+                <label for="jobTitle">Job Title/Designation</label>
+                <input type="text" id="jobTitle" />
+              </div>
+              <div class="field-group">
+                <label for="expJoiningDate">Joining Date</label>
+                <input type="date" id="expJoiningDate" />
+              </div>
+              <div class="field-group">
+                <label for="leavingDate">Leaving Date</label>
+                <input type="date" id="leavingDate" />
+              </div>
+              <div class="field-group">
+                <label for="expGrade">Grade or GPA</label>
+                <input type="text" id="expGrade" />
+              </div>
+            </div>
+
+            <div class="tab-pane" id="salary">
+              <div class="field-group">
+                <label for="basicSalary">Basic Salary</label>
+                <input type="number" id="basicSalary" />
+              </div>
+              <div class="field-group">
+                <label for="allowances">Allowances</label>
+                <input type="number" id="allowances" />
+              </div>
+              <div class="field-group">
+                <label for="deductions">Deductions</label>
+                <input type="number" id="deductions" />
+              </div>
+              <div class="field-group">
+                <label for="netSalary">Net Salary</label>
+                <input type="number" id="netSalary" readonly />
+              </div>
+            </div>
+
+            <div class="tab-pane" id="job-history">
+              <div class="field-group">
+                <label for="previousPosition">Previous Position</label>
+                <input type="text" id="previousPosition" />
+              </div>
+              <div class="field-group">
+                <label for="promotionDate">Promotion Date</label>
+                <input type="date" id="promotionDate" />
+              </div>
+              <div class="field-group">
+                <label for="currentPosition">Current Position</label>
+                <input type="text" id="currentPosition" />
+              </div>
+            </div>
+
+            <div class="tab-pane" id="performance">
+              <div class="field-group">
+                <label for="performanceRating">Performance Rating</label>
+                <select id="performanceRating">
+                  <option value="">Select Rating</option>
+                  <option value="excellent">Excellent</option>
+                  <option value="good">Good</option>
+                  <option value="average">Average</option>
+                  <option value="poor">Poor</option>
+                </select>
+              </div>
+              <div class="field-group">
+                <label for="reviewDate">Review Date</label>
+                <input type="date" id="reviewDate" />
+              </div>
+              <div class="field-group">
+                <label for="comments">Comments</label>
+                <textarea id="comments" rows="4"></textarea>
+              </div>
+            </div>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
